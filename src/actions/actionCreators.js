@@ -2,7 +2,7 @@ import { CHANGE_SEARCHFIELD,
     REQUEST_MOVIES_PENDING,
     REQUEST_MOVIES_SUCCESS,
     REQUEST_MOVIES_FAILED     } from './constants'; 
-    const api_key = "f6a6c1e0cd0ac0f859242f315ed260c5"; 
+    // api key
 
     export const setSearchField = (text) => ({
         type: CHANGE_SEARCHFIELD,

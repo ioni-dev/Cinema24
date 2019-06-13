@@ -1,8 +1,6 @@
-import { bindActionCreators, compose } from 'redux';
 import { connect } from 'react-redux';
 import Main from './Main';
-import { Link, withRouter } from 'react-router';
-import React from 'react';
+import {  withRouter } from 'react-router';
 import { setSearchField, requestMovies } from '../actions/actionCreators';
 
  
