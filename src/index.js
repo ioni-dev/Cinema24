@@ -13,7 +13,7 @@ import Home from './components/Home';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
  
 import { routerReducer } from 'react-router-redux';
-import { searchMovies, requestMovies } from './reducers/reducers';
+import { searchMovies, requestMovies, changePage } from './reducers/reducers';
 import thunkMiddleware from 'redux-thunk';
 import { combineReducers, applyMiddleware, createStore} from 'redux';
 import { Provider } from 'react-redux';
@@ -25,7 +25,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 
 import * as serviceWorker from './serviceWorker';
 
-const rootReducer = combineReducers({ searchMovies, requestMovies, routing: routerReducer })
+const rootReducer = combineReducers({ searchMovies, requestMovies, changePage, routing: routerReducer })
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 

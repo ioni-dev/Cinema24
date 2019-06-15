@@ -6,8 +6,11 @@ import MovieGrid from './MovieGrid';
 class Main extends React.Component{
     
     render(){
+        console.log(this.props)
+        const { page } = this.props;
         return(
-            <nav>
+            <div>
+                <nav>
                 
                     <ul>
                         <li className="item1"><Link to="/">Cinema24</Link></li>
@@ -22,10 +25,12 @@ class Main extends React.Component{
                 
                 
                     </ul>
-
-                {React.cloneElement(this.props.children, this.props)}
-                <MovieGrid movies={this.props.movies}/>
-            </nav>
+                </nav>
+                    {React.cloneElement(this.props.children, this.props)}
+                    <MovieGrid movies={this.props.movies}/>
+                    <button className="page" onClick={ this.props.onChangePage.bind(null, page)}>{page}</button>
+                    <span key={page} className="pageNumber">{page}</span>
+            </div>
         );
     }
 }  

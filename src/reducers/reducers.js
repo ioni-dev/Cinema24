@@ -1,10 +1,12 @@
 import { CHANGE_SEARCHFIELD,
     REQUEST_MOVIES_PENDING,
     REQUEST_MOVIES_SUCCESS,
-    REQUEST_MOVIES_FAILED     } from '../actions/constants'; 
+    REQUEST_MOVIES_FAILED,
+    INCREMENT_PAGE         } from '../actions/constants'; 
 
  
 export const initialState = {
+    pageNumber: 1,
     searchField: '',
     pending: false,
     movies: [],
@@ -16,6 +18,18 @@ export const searchMovies = (state = initialState, action = {}) => {
         case CHANGE_SEARCHFIELD:
             return Object.assign({}, state, { searchField: action.payload});
         default: 
+            return state;
+    }
+}
+
+export const changePage = (state = initialState, action = {}) => {
+    switch(action.type) {
+        case INCREMENT_PAGE:
+            const i = action.pageNumber;
+          
+            return Object.assign({}, state, { pageNumber: action.pageNumber + 2})
+         
+        default:
             return state;
     }
 }

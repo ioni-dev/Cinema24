@@ -1,15 +1,23 @@
 import { CHANGE_SEARCHFIELD,
     REQUEST_MOVIES_PENDING,
     REQUEST_MOVIES_SUCCESS,
-    REQUEST_MOVIES_FAILED     } from './constants'; 
+    REQUEST_MOVIES_FAILED,
+    INCREMENT_PAGE     } from './constants'; 
     // api key
+     
+ 
 
     export const setSearchField = (text) => ({
         type: CHANGE_SEARCHFIELD,
         payload: text
     });
     
-    
+    export function changePage(page) {
+       return {
+        type: INCREMENT_PAGE,
+         page }
+       }
+
     export const requestMovies = (serchField) => (dispatch) => {
             dispatch ({ type: REQUEST_MOVIES_PENDING });
             fetch(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${serchField}`)
