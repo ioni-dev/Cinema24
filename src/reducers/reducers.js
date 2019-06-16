@@ -25,10 +25,7 @@ export const searchMovies = (state = initialState, action = {}) => {
 export const changePage = (state = initialState, action = {}) => {
     switch(action.type) {
         case INCREMENT_PAGE:
-            const i = action.pageNumber;
-          
-            return Object.assign({}, state, { pageNumber: action.pageNumber + 2})
-         
+            return Object.assign({}, state, { pageNumber: state.pageNumber + 1})
         default:
             return state;
     }
