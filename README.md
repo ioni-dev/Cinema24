@@ -12,4 +12,4 @@ A solution for all, this app lets you save all of your favorites movies in categ
 - Consuming an API
 - Css Grid
 
-** This project is in progress and new functionalities are getting added,  
+** This project is in progress and new functionalities are getting added.
