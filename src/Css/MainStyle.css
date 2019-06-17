@@ -1,7 +1,7 @@
 nav{
     width: 100vw;
     background: #278ea5;
-   
+   position: relative;
 }
 .item1{
     grid-column: 1/ span 1;

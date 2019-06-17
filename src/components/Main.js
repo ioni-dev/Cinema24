@@ -25,11 +25,10 @@ class Main extends React.Component{
                     </ul>
                 </nav>
                     {React.cloneElement(this.props.children, this.props)}
-                    <MovieGrid movies={this.props.movies}/>
-                    {/* <button className="page" onClick={ this.props.onChangePage.bind(null, pageNumber)} >{pageNumber}</button> */}
-                    <button className="page" onClick={() => this.props.onBothFunction(pageNumber)} >{pageNumber}</button>
+                    
+{/*                     <button className="page" onClick={() => this.props.onBothFunction(pageNumber)} >{pageNumber}</button>
                    
-                    <span key={pageNumber} className="pageNumber">next</span>
+                    <span key={pageNumber} className="pageNumber">next</span> */}
             </div>
         );
     }

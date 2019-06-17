@@ -1,27 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router';
+import MovieGrid from './MovieGrid';
+import '../Css/SingleStyle.css';
 
 class Single extends React.Component{
     render(){
         let movieId = parseInt(this.props.params.movieId);
         const i = this.props.movies.findIndex(movie=> movie.id === movieId);
         const list = this.props.movies[i];
-        console.log(this.props)
         return(
-            <div>
-                        <div>
-                        <Link to={`/view/${list.id}`}>
+            <div className="singleMovie">
+                        
+                          <Link to={<MovieGrid/>}>
                               <img src= {`https://image.tmdb.org/t/p/w300/${list.poster_path}`} 
-                               className="dib" title="Movie poster" alt="movie"/>
+                               className="poster" title="Movie poster" alt="movie poster"/>
                             </Link>
+                        <div className="movieInfo">
                             <h1 className="f4"> {list.title} </h1>
                              <h4> {list.release_date} </h4>
                              <h4> {list.vote_average} </h4>
-                             <hr></hr>
                              
                              <p className="overview"> {list.overview} </p>
-                        </div>
-                            <div className="AddToList"> 
+                             <div className="AddToList"> 
                                 {/* dropdown for each movie, this display the current list for each user, the user needs to create
                                 his own lists in order to display something */}
                                  <div className="dropDown">
@@ -34,6 +34,8 @@ class Single extends React.Component{
                                     </div>
                                 </div> 
                              </div>
+                        </div>
+                            
                 </div>
         )
     }

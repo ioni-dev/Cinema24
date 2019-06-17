@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import Single from './components/Single';
-import MovieGrid from './components/MovieGrid';
 import About from './components/About';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -24,6 +23,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 
 
 import * as serviceWorker from './serviceWorker';
+import MovieGrid from './components/MovieGrid';
 
 const rootReducer = combineReducers({ searchMovies, requestMovies, changePage, routing: routerReducer })
 
@@ -36,14 +36,12 @@ ReactDOM.render(
     <Provider store={store}>
         <Router history={history}>
             <Route path="/" component={App}>
-               <IndexRoute component={Home} />
+               <IndexRoute component={MovieGrid} />
                <Route path="/View/:movieId" component={Single} />
                <Route path="/about" component={About} />
-                <Route path="/login" component={Login} />
-                <Route path="/register" component={Register} />
-                <Route path="/*" compornet={NotFound} />
-                
-                
+               <Route path="/login" component={Login} />
+               <Route path="/register" component={Register} />
+               <Route path="/*" compornet={NotFound} />
             </Route>
         </Router> 
      </Provider>   

@@ -1,0 +1,30 @@
+.singleMovie{
+    display: grid;
+    grid-template-columns: 5% 35% 55% 5%;
+    grid-template-rows: 20% 60% 20%;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+
+}
+.movieInfo{
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    color: #13171B;
+}
+img{
+    border-radius: 3%;
+}
+a{
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+}
+
+h4{
+    color: slategray;
+}
+p{
+    text-justify: distribute;
+    font-weight: bold;
+    color: slategray;
+}
