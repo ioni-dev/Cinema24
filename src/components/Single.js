@@ -1,13 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router';
 import MovieGrid from './MovieGrid';
+import Genres from '../common/Genre';
 import '../Css/SingleStyle.css';
+import { importDeclaration } from '@babel/types';
 
 class Single extends React.Component{
     render(){
         let movieId = parseInt(this.props.params.movieId);
         const i = this.props.movies.findIndex(movie=> movie.id === movieId);
         const list = this.props.movies[i];
+        
+             {/* the api response only gives you the id's for the genres, in order to
+               solve this issue, i downloaded all the genres from the api in an array of obj
+               an imported as a module, so here i filter thatmodule with the existing
+              genres from the api rensponse and convert it to a string. Cool */}
+        let movieGenres =  Genres.filter((elem) => list.genre_ids.includes(elem.id)).map(x => x.name).join(' ')
+       
         return(
             <div className="singleMovie">
                         
@@ -17,10 +26,11 @@ class Single extends React.Component{
                             </Link>
                         <div className="movieInfo">
                             <h1 className="f4"> {list.title} </h1>
-                             <h4> {list.release_date} </h4>
-                             <h4> {list.vote_average} </h4>
+                            <h4>{movieGenres}</h4>
+                             <h4> Release: {list.release_date} </h4>
+                             <h4> Rate: {list.vote_average} </h4>
                              
-                             <p className="overview"> {list.overview} </p>
+                             <p className="overview"> Sipnosis: <br></br>{list.overview} </p>
                              <div className="AddToList"> 
                                 {/* dropdown for each movie, this display the current list for each user, the user needs to create
                                 his own lists in order to display something */}
