@@ -2,7 +2,12 @@
 
 ## Cinema24 - Movie Site
 
-A solution for all, this app lets you save all of your favorites movies in categories. You can create list, search for movies, etc.
+This app lets you save all of your favorites movies in categories. You can create list, search for movies, etc.
+##
+![](but-why.gif)
+
+## Because i love Cinema, i'm sometimes i try to remember a movie that i have seen several years ago but no success, or when i want to recommend a movie to family or friends,this is the perfect solution.
+
 
 ## Builded with
 
