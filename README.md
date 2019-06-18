@@ -6,7 +6,7 @@ This app lets you save all of your favorites movies in categories. You can creat
 ##
 ![](but-why.gif)
 
-## Because i love Cinema, i'm sometimes i try to remember a movie that i have seen several years ago but no success, or when i want to recommend a movie to family or friends,this is the perfect solution.
+## Because i love Cinema, sometimes i try to remember a movie that i have seen several years ago but no success, or when i want to recommend a movie to family or friends,this is the perfect solution.
 
 
 ## Builded with
