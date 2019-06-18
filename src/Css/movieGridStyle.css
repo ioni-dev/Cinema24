@@ -1,6 +1,12 @@
 .card-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+    margin: 5% 20% 0% 20%;
    
+}
+.card{
+    margin: 5%;
+}
+.btn{
+    text-align: center;z
 }

@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import MovieGrid from './MovieGrid';
 import Genres from '../common/Genre';
 import '../Css/SingleStyle.css';
-import { importDeclaration } from '@babel/types';
+
 
 class Single extends React.Component{
     render(){
@@ -11,10 +11,10 @@ class Single extends React.Component{
         const i = this.props.movies.findIndex(movie=> movie.id === movieId);
         const list = this.props.movies[i];
         
-             {/* the api response only gives you the id's for the genres, in order to
+             /* the api response only gives you the id's for the genres, in order to
                solve this issue, i downloaded all the genres from the api in an array of obj
                an imported as a module, so here i filter thatmodule with the existing
-              genres from the api rensponse and convert it to a string. Cool */}
+              genres from the api rensponse and convert it to a string. Cool. */
         let movieGenres =  Genres.filter((elem) => list.genre_ids.includes(elem.id)).map(x => x.name).join(' ')
        
         return(

@@ -7,7 +7,7 @@ import About from './components/About';
 import Login from './components/Login';
 import Register from './components/Register';
 import NotFound from './components/NotFound';
-import Home from './components/Home';
+
 
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
  

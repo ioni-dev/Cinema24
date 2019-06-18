@@ -1,16 +1,22 @@
 .singleMovie{
     display: grid;
-    grid-template-columns: 5% 35% 55% 5%;
+    grid-template-columns: 20% 30% 30% 20%;
     grid-template-rows: 20% 60% 20%;
     height: 100vh;
     width: 100vw;
     position: absolute;
-
+    
+}
+.singleMovie a {
+    align-self: center;
+    justify-self: center;
 }
 .movieInfo{
     grid-column: 3 / span 1;
     grid-row: 2 / span 1;
     color: #13171B;
+    align-self: center;
+    justify-self: center;
 }
 img{
     border-radius: 3%;

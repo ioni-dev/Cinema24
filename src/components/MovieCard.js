@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import '../Css/movieGridStyle.css';
 
 class MovieCard extends React.Component{
     render() {
@@ -9,7 +10,7 @@ class MovieCard extends React.Component{
             <div className="card" key={i} >
                         <div className="tc">
                             <Link to={`/view/${list.id}`}>
-                              <img src= {`https://image.tmdb.org/t/p/w300/${list.poster_path}`} 
+                              <img src= {`https://image.tmdb.org/t/p/w185/${list.poster_path}`} 
                                className="dib" title="Movie poster" alt="movie"/>
                             </Link>
            {/*                   <h1 className="f4"> {list.title} </h1>
