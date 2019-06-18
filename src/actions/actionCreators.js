@@ -4,7 +4,7 @@ import { CHANGE_SEARCHFIELD,
     REQUEST_MOVIES_FAILED,
     INCREMENT_PAGE     } from './constants'; 
     // api key
-   
+  
  
 
     export const setSearchField = (text) => ({

@@ -1,0 +1,15 @@
+.container{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 10% 60% 30%;
+    height: 90vh;
+}
+.mainPoster{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+.subContainer{
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    
+}

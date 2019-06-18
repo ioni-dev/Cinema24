@@ -24,6 +24,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 
 import * as serviceWorker from './serviceWorker';
 import MovieGrid from './components/MovieGrid';
+import Home from './components/Home';
 
 const rootReducer = combineReducers({ searchMovies, requestMovies, changePage, routing: routerReducer })
 
@@ -36,8 +37,9 @@ ReactDOM.render(
     <Provider store={store}>
         <Router history={history}>
             <Route path="/" component={App}>
-               <IndexRoute component={MovieGrid} />
+               <IndexRoute component={Home} />
                <Route path="/View/:movieId" component={Single} />
+               <Route path="/search" component={MovieGrid} />
                <Route path="/about" component={About} />
                <Route path="/login" component={Login} />
                <Route path="/register" component={Register} />

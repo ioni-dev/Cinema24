@@ -1,26 +1,33 @@
 nav{
     width: 100vw;
-    background: #278ea5;
+ 
    position: relative;
 }
-.item1{
-    grid-column: 1/ span 1;
+ul{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 20%  10% 10% 10% 10% 10% 10% 20%;
+    height: 40px;
+    align-items: center;
+    justify-items: center;
 }
-.item2{
+.item1{
     grid-column: 2/ span 1;
 }
-.item3{
+.item2{
     grid-column: 3/ span 1;
 }
-.item4{
+.item3{
     grid-column: 4/ span 1;
 }
-.item5{
+.item4{
     grid-column: 5/ span 1;
 }
-.item6{
+.item5{
     grid-column: 6/ span 1;
 }
+
 li{
     list-style-type: none;
 }
@@ -28,9 +35,3 @@ a{
     text-decoration: none;
 }
 
-ul{
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-}

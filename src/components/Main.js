@@ -14,8 +14,9 @@ class Main extends React.Component{
                         <li className="item2"><Link to="/About">About</Link></li>
                         <li className="item3"><Link to="/login">Login</Link></li>
                         <li className="item4"><Link to="/register">Register</Link></li>
-                        <li className="item5"> <input type="search" placeholder='search movies' onChange={this.props.onSearchChange} /></li>
-                        <li className="item6"><button onClick={() => this.props.onRequestMovies(this.props.searchField) }> fetch movies</button> </li>
+                        <li className="item5"> <input type="search" placeholder='search movies' onChange={this.props.onSearchChange} />
+                            <button onClick={() => this.props.onRequestMovies(this.props.searchField) }><Link to="/search"> fetch movies</Link></button></li>
+                      
                     </ul>
                 </nav>
                     {React.cloneElement(this.props.children, this.props)}

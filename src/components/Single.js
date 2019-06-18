@@ -20,7 +20,7 @@ class Single extends React.Component{
         return(
             <div className="singleMovie">
                         
-                          <Link to={<MovieGrid/>}>
+                          <Link to="/search">
                               <img src= {`https://image.tmdb.org/t/p/w300/${list.poster_path}`} 
                                className="poster" title="Movie poster" alt="movie poster"/>
                             </Link>

@@ -4,9 +4,7 @@ import Home from './Home';
 import '../Css/movieGridStyle.css';
 
 class MovieGrid extends React.Component{
-    
     render(){
-        console.log(this.props)
         const { movies } = this.props;
         if( movies.length !== 0){
         return(
