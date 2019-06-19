@@ -1,9 +1,7 @@
 .singleMovie{
     display: grid;
-    grid-template-columns: 20% 30% 30% 20%;
-    grid-template-rows: 20% 60% 20%;
-    height: 100vh;
-    width: 100vw;
+    grid-template-columns: 1fr 300px 500px 1fr;
+    padding: 8% 25% 0% 25%;
     position: absolute;
     
 }
@@ -17,9 +15,11 @@
     color: #13171B;
     align-self: center;
     justify-self: center;
+    padding: 5%;
 }
 img{
     border-radius: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
 }
 a{
     grid-row: 2 / span 1;
@@ -33,4 +33,25 @@ p{
     text-justify: distribute;
     font-weight: bold;
     color: slategray;
+}
+
+@media screen and (max-width: 1150px){
+    .singleMovie{
+       
+        padding: 8% 5% 0% 15%;
+
+        
+    }
+    .singleMovie a {
+        align-self: center;
+        justify-self: center;
+    }
+    .movieInfo{
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+        color: #13171B;
+        align-self: center;
+        justify-self: center;
+        padding: 5%;
+    }
 }

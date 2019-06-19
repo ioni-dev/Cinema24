@@ -1,15 +1,26 @@
 .container{
     display: grid;
-    grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 10% 60% 30%;
-    height: 90vh;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 400px 200px;
+    margin-top: 5%;
+    
 }
 .mainPoster{
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
+    justify-self: center;
+    align-self: center;
 }
 .subContainer{
-    grid-column: 2 / span 1;
-    grid-row: 3 / span 1;
-    
+    grid-row: 2 / span 1;
+    justify-self: center;
+    align-self: center;
+}
+.title{
+    font-size: 60px;
+    font-weight: 500;
+    color: #06080A;
+}
+.phrase{
+    color: #36717F;
+    font-size: 1.2em;
+    margin-top: 5%;
 }
