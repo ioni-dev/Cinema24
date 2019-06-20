@@ -1,21 +1,20 @@
-ul{
-    display: grid;
-    grid-template-columns:1fr 250px 250px 250px 300px 1fr;
+nav{
+    width: 100vw;
    position: relative;
-   align-items: center;
 }
-
+ul{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    height: 40px;
+    align-items: center;
+    justify-items: center;
+}
 
 li{
     list-style-type: none;
 }
-.item1{
-  grid-column: 2 / span 1;
-}
-.item2{
-  grid-column: 3 / span 1;
-}
-
 a{
     text-decoration: none;
     color: #1B2123;

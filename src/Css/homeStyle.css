@@ -1,13 +1,14 @@
 .container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: 400px 200px;
+    grid-template-rows: 150px 400px 200px;
     margin-top: 5%;
     
 }
 .mainPoster{
     justify-self: center;
     align-self: center;
+    grid-row: 2 / span 1;
 }
 .subContainer{
     grid-row: 2 / span 1;
@@ -15,7 +16,7 @@
     align-self: center;
 }
 .title{
-    font-size: 60px;
+    font-size: 90px;
     font-weight: 500;
     color: #06080A;
 }
